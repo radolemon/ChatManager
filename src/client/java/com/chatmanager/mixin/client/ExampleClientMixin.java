@@ -11,5 +11,6 @@ public class ExampleClientMixin {
 	@Inject(at = @At("HEAD"), method = "run")
 	private void init(CallbackInfo info) {
 		// This code is injected into the start of MinecraftClient.run()V
+		System.out.println("[ChatManager] クライアント初期化！");
 	}
 }
