@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "chatmanager",
+	"version": "${version}",
+	"name": "ChatManager",
+	"description": "このModは、Minecraftのチャット機能を拡張・管理するためのツールです。チャットログの保存、検索、フィルタリングなど、より快適なチャット体験を提供します。",
+	"authors": [
+		"rado1049"
+	],
+	"contact": {
+		"homepage": "https://github.com/radolemon/ChatManager/wiki/",
+		"issues": "https://github.com/radolemon/ChatManager/issues",
+		"sources": "https://github.com/radolemon/ChatManager"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/chatmanager/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.chatmanager.ChatManager"
+		],
+		"client": [
+			"com.chatmanager.ChatManagerClient"
+		]
+	},
+	"mixins": [
+		"chatmanager.mixins.json",
+		{
+			"config": "chatmanager.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
