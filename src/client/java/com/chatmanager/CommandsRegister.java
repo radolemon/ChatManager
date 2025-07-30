@@ -110,7 +110,7 @@ public class CommandsRegister {
                                                 );
 
                                         // メッセージとリンクを結合して送信
-                                        Text message = Text.literal("\n§6 ====== ChatManager ====== \n\n§dversion:" + modVersion + "\n\n§cNeed More help? ")
+                                        Text message = Text.literal("\n§6 ====== ChatManager ====== \n\n§dversion: " + modVersion + "\n\n§cNeed More help? ")
                                                 .append(clickableHelp);
 
                                         context.getSource().sendFeedback(message);
